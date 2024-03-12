@@ -68,7 +68,7 @@ int main()
 				obj.add("number", (int64_t)as->number);
 				obj.add("handle", as->handle);
 				obj.add("name", as->name);
-				obj.add("is_hosting", as->isHosting());
+				obj.add("is_hosting", as->isHosting(g_net_intel));
 
 				auto body = obj.encodePretty();
 
@@ -97,7 +97,7 @@ int main()
 				obj.add("number", (int64_t)as->number);
 				obj.add("handle", as->handle);
 				obj.add("name", as->name);
-				obj.add("is_hosting", as->isHosting());
+				obj.add("is_hosting", as->isHosting(g_net_intel));
 
 				auto body = obj.encodePretty();
 
