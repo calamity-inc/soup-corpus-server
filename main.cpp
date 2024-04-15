@@ -56,7 +56,7 @@ int main()
 			IpAddr ip;
 			if (!ip.fromString(req.path.substr(8)))
 			{
-				ServerWebService::sendResponse(s, "400", "Invalid IP address");
+				ServerWebService::sendContent(s, "400", "Invalid IP address");
 			}
 			else if (g_net_intel_as_of == time::LONGAGO)
 			{
@@ -119,7 +119,7 @@ int main()
 			IpAddr ip;
 			if (!ip.fromString(req.path.substr(14)))
 			{
-				ServerWebService::sendResponse(s, "400", "Invalid IP address");
+				ServerWebService::sendContent(s, "400", "Invalid IP address");
 			}
 			else if (g_net_intel_as_of == time::LONGAGO)
 			{
