@@ -117,7 +117,7 @@ int main()
 		else if (req.path.substr(0, 14) == "/locationByIp/")
 		{
 			IpAddr ip;
-			if (!ip.fromString(req.path.substr(8)))
+			if (!ip.fromString(req.path.substr(14)))
 			{
 				ServerWebService::sendResponse(s, "400", "Invalid IP address");
 			}
